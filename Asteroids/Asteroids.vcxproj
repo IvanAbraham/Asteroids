@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClCompile Include="asteroids.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="interactions.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="screens.cpp" />
     <ClCompile Include="ship.cpp" />
@@ -150,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="asteroids.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="interactions.h" />
     <ClInclude Include="screens.h" />
     <ClInclude Include="ship.h" />
   </ItemGroup>
