@@ -3,3 +3,4 @@
 
 void ExecuteGame();
 void Update(Vector2 screenSize);
+void Draw();
