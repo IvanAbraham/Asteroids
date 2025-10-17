@@ -1,6 +1,6 @@
 #pragma once
-#include "raylib.h"
-#include "interactions.h"
+#include "menu.h"
+#include "gamestates.h"
 
 struct Mouse
 {
@@ -10,29 +10,11 @@ struct Mouse
 
 };
 
-enum GameScreen
-{
-
-	Menu = 0,
-	Game,
-	Credits
-
-};
-
-struct Buttons
-{
-	Vector2 size;
-	Vector2 position;
-
-};
-
-extern GameScreen currentScreen;
 extern bool openGame;
 
-
-void InitMenu(int screenWidth, int screenHeight);
-void UpdateMenu();
-void DrawMenu();
+void InitMenuScreen(Vector2 screenSize);
+void UpdMenuScreen();
+void DrwMenuScreen();
 
 void UpdateGamep(int screenWidth, int screenHeight);
 void DrawGame(int screenWidth, int screenHeight);

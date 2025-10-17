@@ -7,7 +7,8 @@ void ExecuteGame()
 
 	Vector2 screenSize = { 1280, 720 };
 	InitWindow(screenSize.x, screenSize.y, "Asteroids");
-	InitMenu(screenSize.x, screenSize.y);
+	
+	InitMenuScreen(screenSize);
 
 	while (openGame)
 	{
@@ -25,14 +26,31 @@ void ExecuteGame()
 
 void Update(Vector2 screenSize)
 {
+	switch (currentScreen)
+	{
 
-	UpdateMenu();
+		case Menu:	
+			
+			UpdMenuScreen();
+
+			break;
+
+		case Game:
+
+			break;
+
+		case Credits:
+
+			break;
+
+	}
+	
 
 }
 
 void Draw()
 {
 
-	DrawMenu();
+	DrwMenuScreen();
 
 }

@@ -145,13 +145,16 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="interactions.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="screens.cpp" />
     <ClCompile Include="ship.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="asteroids.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="gamestates.h" />
     <ClInclude Include="interactions.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="screens.h" />
     <ClInclude Include="ship.h" />
   </ItemGroup>

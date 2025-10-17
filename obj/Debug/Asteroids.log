@@ -1,16 +1,10 @@
 ﻿  game.cpp
-  main.cpp
-  screens.cpp
 D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\game.cpp(9,37): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
 D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\game.cpp(9,23): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\game.cpp(10,35): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\game.cpp(10,21): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  main.cpp
 D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\main.cpp(3,6): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\screens.cpp(15,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\screens.cpp(16,30): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\screens.cpp(20,35): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\screens.cpp(21,36): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\screens.cpp(25,34): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\screens.cpp(26,35): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  menu.cpp
+  screens.cpp
   Generando código...
+D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\menu.cpp(49,1): warning C4715: 'UpdateMenu': no todas las rutas de acceso de control devuelven un valor
   Asteroids.vcxproj -> D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\bin\Debug\Asteroids.exe

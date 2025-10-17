@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\screens.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\interactions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\interactions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\screens.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -23,16 +23,24 @@
       "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\screens.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\ship.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\interactions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\interactions.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\asteroids.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\asteroids.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\gamestates.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\gamestates.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\asteroids.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -43,8 +51,20 @@
       "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\ship.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\Ship.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\Ship.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\interactions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\interactions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\asteroids.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E2331C9C-61E9-40CD-9E57-B9E34C6F068A}|Asteroids\\Asteroids.vcxproj|solutionrelative:Asteroids\\asteroids.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\gameplay.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Asteroids\\gameplay.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\gameplay.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Asteroids\\gameplay.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,24 +74,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "gamestates.h",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\gamestates.h",
+              "RelativeDocumentMoniker": "Asteroids\\gamestates.h",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\gamestates.h",
+              "RelativeToolTip": "Asteroids\\gamestates.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-17T06:06:51.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "menu.cpp",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\menu.cpp",
+              "RelativeDocumentMoniker": "Asteroids\\menu.cpp",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\menu.cpp",
+              "RelativeToolTip": "Asteroids\\menu.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-17T04:14:52.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "menu.h",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\menu.h",
+              "RelativeDocumentMoniker": "Asteroids\\menu.h",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\menu.h",
+              "RelativeToolTip": "Asteroids\\menu.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-17T04:14:40.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "interactions.h",
               "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\interactions.h",
               "RelativeDocumentMoniker": "Asteroids\\interactions.h",
               "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\interactions.h",
               "RelativeToolTip": "Asteroids\\interactions.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-10-14T23:43:30.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "interactions.cpp",
               "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\interactions.cpp",
               "RelativeDocumentMoniker": "Asteroids\\interactions.cpp",
@@ -84,27 +143,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ship.h",
-              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.h",
-              "RelativeDocumentMoniker": "Asteroids\\ship.h",
-              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.h",
-              "RelativeToolTip": "Asteroids\\ship.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "screens.h",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.h",
+              "RelativeDocumentMoniker": "Asteroids\\screens.h",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.h*",
+              "RelativeToolTip": "Asteroids\\screens.h*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-13T23:03:11.867Z"
+              "WhenOpened": "2025-10-13T23:02:55.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ship.cpp",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.cpp",
+              "RelativeDocumentMoniker": "Asteroids\\ship.cpp",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.cpp",
+              "RelativeToolTip": "Asteroids\\ship.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-13T23:01:18.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\main.cpp",
+              "RelativeDocumentMoniker": "Asteroids\\main.cpp",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\main.cpp",
+              "RelativeToolTip": "Asteroids\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-13T22:27:13.739Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "screens.h",
-              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.h",
-              "RelativeDocumentMoniker": "Asteroids\\screens.h",
-              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.h",
-              "RelativeToolTip": "Asteroids\\screens.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-10-13T23:02:55.577Z",
+              "Title": "screens.cpp",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.cpp",
+              "RelativeDocumentMoniker": "Asteroids\\screens.cpp",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.cpp",
+              "RelativeToolTip": "Asteroids\\screens.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-13T23:00:51.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "game.cpp",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\game.cpp",
+              "RelativeDocumentMoniker": "Asteroids\\game.cpp",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\game.cpp*",
+              "RelativeToolTip": "Asteroids\\game.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-13T23:00:43.462Z",
               "EditorCaption": ""
             },
             {
@@ -122,7 +221,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
+              "Title": "asteroids.cpp",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\asteroids.cpp",
+              "RelativeDocumentMoniker": "Asteroids\\asteroids.cpp",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\asteroids.cpp",
+              "RelativeToolTip": "Asteroids\\asteroids.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-13T23:01:36.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ship.h",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.h",
+              "RelativeDocumentMoniker": "Asteroids\\ship.h",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.h",
+              "RelativeToolTip": "Asteroids\\ship.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-13T23:03:11.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "gameplay.h",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\gameplay.h",
+              "RelativeDocumentMoniker": "Asteroids\\gameplay.h",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\gameplay.h",
+              "RelativeToolTip": "Asteroids\\gameplay.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-17T04:16:30.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "gameplay.cpp",
+              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\gameplay.cpp",
+              "RelativeDocumentMoniker": "Asteroids\\gameplay.cpp",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\gameplay.cpp",
+              "RelativeToolTip": "Asteroids\\gameplay.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-17T04:16:40.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "asteroids.h",
               "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\asteroids.h",
               "RelativeDocumentMoniker": "Asteroids\\asteroids.h",
@@ -131,69 +280,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-10-13T23:01:52.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "asteroids.cpp",
-              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\asteroids.cpp",
-              "RelativeDocumentMoniker": "Asteroids\\asteroids.cpp",
-              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\asteroids.cpp",
-              "RelativeToolTip": "Asteroids\\asteroids.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-13T23:01:36.623Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ship.cpp",
-              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.cpp",
-              "RelativeDocumentMoniker": "Asteroids\\ship.cpp",
-              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.cpp",
-              "RelativeToolTip": "Asteroids\\ship.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-13T23:01:18.615Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "screens.cpp",
-              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.cpp",
-              "RelativeDocumentMoniker": "Asteroids\\screens.cpp",
-              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\screens.cpp*",
-              "RelativeToolTip": "Asteroids\\screens.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-13T23:00:51.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "game.cpp",
-              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\game.cpp",
-              "RelativeDocumentMoniker": "Asteroids\\game.cpp",
-              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\game.cpp",
-              "RelativeToolTip": "Asteroids\\game.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-13T23:00:43.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "main.cpp",
-              "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\main.cpp",
-              "RelativeDocumentMoniker": "Asteroids\\main.cpp",
-              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\main.cpp",
-              "RelativeToolTip": "Asteroids\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-13T22:27:13.739Z",
-              "EditorCaption": ""
             }
           ]
         }
