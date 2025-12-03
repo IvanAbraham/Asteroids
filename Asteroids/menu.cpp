@@ -46,6 +46,8 @@ GameScreen UpdateMenu(Vector2 mousePos)
 
     }
 
+    return Menu;
+
 }
 
 void DrawMenu()
@@ -54,5 +56,7 @@ void DrawMenu()
     DrawRectangleV(title.position, title.size, PINK);
     DrawRectangleV(startButton.position, startButton.size, BLUE);
     DrawRectangleV(quitButton.position, quitButton.size, RED);
+
+    ClearBackground(BLACK);
 
 }

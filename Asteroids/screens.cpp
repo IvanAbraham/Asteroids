@@ -34,23 +34,25 @@ void DrwMenuScreen()
 
 }
 
-void InitGame(Vector2 screenSize)
+void InitGameScreen(Vector2 screenSize)
 {
 
-
+	InitializeGame(screenSize);
 
 }
 
-void UpdateGame()
+void UpdGameScreen(Vector2 screenSize)
 {
 
+	mousePos = GetMousePosition();
 
+	UpdateGame(screenSize, mousePos);
 
 }
 
-void DrawGame()
+void DrwGameScreen(Vector2 screenSize)
 {
 
-
+	DrawGame(screenSize);
 
 }

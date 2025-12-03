@@ -1,5 +1,4 @@
 #pragma once
-#include "raylib.h"
 #include "gamestates.h"
 #include "interactions.h"
 

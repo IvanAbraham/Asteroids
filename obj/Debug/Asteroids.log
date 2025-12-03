@@ -1,10 +1,5 @@
-﻿  game.cpp
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\game.cpp(9,37): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\game.cpp(9,23): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  main.cpp
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\main.cpp(3,6): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
-  menu.cpp
-  screens.cpp
-  Generando código...
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\menu.cpp(49,1): warning C4715: 'UpdateMenu': no todas las rutas de acceso de control devuelven un valor
+﻿  ship.cpp
+D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\ship.cpp(68,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\ship.cpp(101,44): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\ship.cpp(101,29): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   Asteroids.vcxproj -> D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\bin\Debug\Asteroids.exe

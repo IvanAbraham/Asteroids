@@ -1,6 +1,6 @@
 #pragma once
 #include "menu.h"
-#include "gamestates.h"
+#include "gameplay.h"
 
 struct Mouse
 {
@@ -16,8 +16,9 @@ void InitMenuScreen(Vector2 screenSize);
 void UpdMenuScreen();
 void DrwMenuScreen();
 
-void UpdateGamep(int screenWidth, int screenHeight);
-void DrawGame(int screenWidth, int screenHeight);
+void InitGameScreen(Vector2 screenSize);
+void UpdGameScreen(Vector2 screenSize);
+void DrwGameScreen(Vector2 screenSize);
 
-void UpdateCredits(int screenWidth, int screenHeight);
-void DrawCredcits(int screenWidth, int screenHeight);
+void UpdateCredits();
+void DrawCredcits();

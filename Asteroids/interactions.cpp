@@ -1,4 +1,4 @@
-#include "raylib.h"
+#include "interactions.h"
 
 bool CollisionRecRec(Vector2 pos1, Vector2 size1, Vector2 pos2, Vector2 size2)
 {
@@ -14,4 +14,10 @@ bool CollisionPointRec(Vector2 point, Vector2 rectPos, Vector2 rectSize)
         point.x <= rectPos.x + rectSize.x &&
         point.y >= rectPos.y &&
         point.y <= rectPos.y + rectSize.y);
+}
+
+bool InScreenCheck(Vector2 position, float radius, Vector2 screenSize)
+{
+    return (position.x - radius < 0 || position.x + radius > screenSize.x ||
+        position.y - radius < 0 || position.y + radius > screenSize.y);
 }
