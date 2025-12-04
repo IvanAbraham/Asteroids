@@ -5,7 +5,7 @@
 const int maxAsteroids = 1;
 
 struct Asteroid
-{
+{	
 	bool isActive;
 	float radius;
 	float speed;
@@ -14,6 +14,8 @@ struct Asteroid
 	Vector2 dir;
 	Vector2 targetPosition;
 };
+
+extern Asteroid asteroids[maxAsteroids];
 
 void InitAsteroids(Vector2 screenSize);
 void UpdateAsteroids();

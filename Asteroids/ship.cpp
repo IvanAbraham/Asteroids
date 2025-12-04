@@ -1,7 +1,7 @@
 #include "ship.h"
 
 Ship P1;
-Bullet bullets[MAX_BULLETS];
+Bullet bullets[maxBullets];
 
 void InitShip(Vector2 screenSize)
 {
@@ -13,7 +13,7 @@ void InitShip(Vector2 screenSize)
 	P1.rotation = 0.0f;
 	P1.targetPosition = P1.position;
 
-	for (int i = 0; i < MAX_BULLETS; i++)
+	for (int i = 0; i < maxBullets; i++)
 	{
 		bullets[i].isActive = false;
 	}
@@ -23,9 +23,7 @@ void UpdateShip(Vector2 mousePos)
 {
 	if (IsMouseButtonDown(MOUSE_BUTTON_RIGHT))
 	{
-
-		P1.targetPosition = GetMousePosition();
-		
+		P1.targetPosition = GetMousePosition();	
 	}
 	
 	Vector2 dif = {mousePos.x - P1.position.x, mousePos.y - P1.position.y};
@@ -59,7 +57,7 @@ void MoveShip(Vector2 targetPos, Vector2 &currentPos, float speed)
 
 void ShootBullet(Vector2 shipPos, float shipRotation)
 {
-	for (int i = 0; i < MAX_BULLETS; i++)
+	for (int i = 0; i < maxBullets; i++)
 	{
 		if (!bullets[i].isActive)
 		{
@@ -79,7 +77,7 @@ void ShootBullet(Vector2 shipPos, float shipRotation)
 
 void UpdateBullets()
 {
-	for (int i = 0; i < MAX_BULLETS; i++)
+	for (int i = 0; i < maxBullets; i++)
 	{
 		if (bullets[i].isActive)
 		{
@@ -87,8 +85,8 @@ void UpdateBullets()
 			bullets[i].position.y += bullets[i].velocity.y * GetFrameTime();
 		}
 
-		if (bullets[i].position.x < -50 || bullets[i].position.x > 1330 ||
-			bullets[i].position.y < -50 || bullets[i].position.y > 770)
+		if (bullets[i].position.x < 0 - bullets[i].radius || bullets[i].position.x > 1280 ||
+			bullets[i].position.y < 0 - bullets[i].radius || bullets[i].position.y > 900)
 		{
 			bullets[i].isActive = false;
 		}
@@ -112,11 +110,11 @@ void DrawShip(Ship player)
 void DrawBullets()
 {
 
-	for (int i = 0; i < MAX_BULLETS; i++)
+	for (int i = 0; i < maxBullets; i++)
 	{
 		if (bullets[i].isActive)
 		{
-			DrawCircleV(bullets[i].position, bullets->radius, WHITE);
+			DrawCircleV(bullets[i].position, bullets[i].radius, WHITE);
 		}
 	}
 

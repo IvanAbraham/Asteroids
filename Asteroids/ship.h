@@ -4,7 +4,7 @@
 #include "interactions.h"
 #include <cmath>
 
-#define MAX_BULLETS 30
+int const maxBullets = 30;
 
 struct Ship
 {
@@ -26,7 +26,7 @@ struct Bullet
 };
 
 extern Ship P1;
-extern Bullet bullets[MAX_BULLETS];
+extern Bullet bullets[maxBullets];
 
 void InitShip(Vector2 screenSize);
 void UpdateShip(Vector2 mousePos);

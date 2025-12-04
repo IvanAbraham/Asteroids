@@ -16,6 +16,19 @@ bool CollisionPointRec(Vector2 point, Vector2 rectPos, Vector2 rectSize)
         point.y <= rectPos.y + rectSize.y);
 }
 
+bool CollisionCircleCircle(Vector2 pos1, float radius1, Vector2 pos2, float radius2)
+{
+
+    float dx = pos1.x - pos2.x;
+    float dy = pos1.y - pos2.y;
+
+    float distanceSquared = dx * dx + dy * dy;
+    float radiumSummatory = radius1 + radius2;
+
+    return (distanceSquared <= (radiumSummatory * radiumSummatory));
+
+}
+
 bool InScreenCheck(Vector2 position, float radius, Vector2 screenSize)
 {
     return (position.x - radius < 0 || position.x + radius > screenSize.x ||
