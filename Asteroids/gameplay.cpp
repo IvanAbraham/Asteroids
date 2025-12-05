@@ -10,7 +10,7 @@
 	{
         UpdateShip(mousePos);
         UpdateBullets();
-        UpdateAsteroids();
+        UpdateAsteroids(screenSize);
 
         for (int i = 0; i < maxAsteroids; i++)
         {
