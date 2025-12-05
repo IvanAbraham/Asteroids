@@ -76,6 +76,7 @@
 
     void UpdateAsteroids(Vector2 screenSize)
     {
+
         for (int i = 0; i < maxAsteroids; i++)
         {
             if (asteroids[i].isActive)
@@ -107,6 +108,19 @@
                     }
                 }
             }
+
+            else
+            {
+                static float respawnTimer[maxAsteroids] = { 0 };
+                respawnTimer[i] += GetFrameTime();
+
+                if (respawnTimer[i] > 1.0)
+                {
+                    SpawnAsteroid(i, screenSize);
+                    respawnTimer[i] = 0;
+                }
+            }
+
         }
     }
 
