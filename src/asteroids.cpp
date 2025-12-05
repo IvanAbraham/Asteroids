@@ -1,7 +1,8 @@
 #include "asteroids.h"
 
 
-    Asteroid asteroids[maxAsteroids];
+Asteroid asteroids[maxAsteroids];
+Texture2D asteroidsTexture;
 
     void InitAsteroids(Vector2 screenSize)
     {
@@ -17,6 +18,11 @@
         {
             SpawnAsteroid(i, screenSize);
         }
+    }
+
+    void LoadAsteroidsTexture()
+    {
+        asteroidsTexture = LoadTexture("../res/sprites/Game/Asteroid.png");
     }
 
     void SpawnAsteroid(int iteration, Vector2 screenSize)
@@ -130,8 +136,11 @@
         {
             if (asteroids[i].isActive)
             {
-                DrawCircleLines(static_cast<int>(asteroids[i].position.x), static_cast<int>(asteroids[i].position.y), asteroids[i].radius, WHITE);
+                Rectangle source = { 0, 0, (float)asteroidsTexture.width, (float)asteroidsTexture.height };
+                Rectangle dest = { asteroids[i].position.x, asteroids[i].position.y, asteroids[i].radius * 2.0f, asteroids[i].radius * 2.0f };
+                Vector2 origin = { asteroids[i].radius, asteroids[i].radius };
 
+                DrawTexturePro(asteroidsTexture, source, dest, origin, 0.0f, WHITE);
             }
         }
     }

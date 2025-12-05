@@ -11,4 +11,5 @@ struct Buttons
 
 void InitializeMenu(Vector2 screenSize);
 GameScreen UpdateMenu(Vector2 mousePos);
-void DrawMenu();
+void DrawMenu(Vector2 screenSize);
+void LoadMenuTextures();

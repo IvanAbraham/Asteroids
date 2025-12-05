@@ -3,6 +3,8 @@
 Ship P1;
 Bullet bullets[maxBullets];
 
+Texture2D playerTexture;
+
 void InitShip(Vector2 screenSize)
 {
 	P1.isHurt = false;
@@ -13,12 +15,18 @@ void InitShip(Vector2 screenSize)
 	P1.spriteSize.x = (P1.radius * 2) + 10;
 	P1.spriteSize.y = (P1.radius * 2) + 10;
 	P1.rotation = 0.0f;
+	P1.velocity = { 0.0f, 0.0f };
 	P1.targetPosition = P1.position;
 
 	for (int i = 0; i < maxBullets; i++)
 	{
 		bullets[i].isActive = false;
 	}
+}
+
+void LoadShipTexture()
+{
+	playerTexture = LoadTexture("../res/sprites/Game/Ship.png");
 }
 
 void UpdateShip(Vector2 mousePos)
@@ -85,24 +93,21 @@ void UpdateBullets()
 	}
 }
 
-void DrawShip(Ship player)
+void DrawShip()
 {
-	if(!P1.isHurt)
+
+	Vector2 origin = { P1.spriteSize.x / 2.0f, P1.spriteSize.y / 2.0f };
+	Rectangle source = { 0, 0, (float)playerTexture.width, (float)playerTexture.height };
+	Rectangle dest = { P1.position.x, P1.position.y, P1.spriteSize.x, P1.spriteSize.y };
+
+	if (P1.isHurt)
 	{
-		DrawCircleLines(static_cast<int>(P1.position.x), static_cast<int>(P1.position.y), P1.radius, PINK);
+		DrawTexturePro(playerTexture, source, dest, origin, P1.rotation + 90.0f, RED);
 	}
 	else
 	{
-		DrawCircleLines(static_cast<int>(P1.position.x), static_cast<int>(P1.position.y), P1.radius, RED);
+		DrawTexturePro(playerTexture, source, dest, origin, P1.rotation + 90.0f, WHITE);
 	}
-	float rotationAngle = player.rotation * DEG2RAD;
-	Vector2 endPoint = {
-		player.position.x + cosf(rotationAngle) * player.radius,
-		player.position.y + sinf(rotationAngle) * player.radius
-	};
-	
-	DrawLineEx(player.position, endPoint, 2, SKYBLUE);
-
 }
 
 void DrawBullets()

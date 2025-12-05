@@ -3,29 +3,30 @@
 	bool isPlaying;
 	bool gameOver;
 
-	float invTimer;;
+	float invTimer;
 
 	int score;
 
 	void InitializeGame(Vector2 screenSize)
 	{
 		InitShip(screenSize);
+		LoadShipTexture();
 		InitAsteroids(screenSize);
+		LoadAsteroidsTexture();
 		isPlaying = true;
 		gameOver = false;
-
 		score = 0;
 		invTimer = 5.0f;
 	}
 
 	void UpdateGame(Vector2 screenSize, Vector2 mousePos)
 	{
-		/*	
+		
 		if (IsKeyPressed(KEY_ESCAPE))
 		{
 			isPlaying = false;
 		}
-		*/
+		
 		if (isPlaying)
 		{
 			UpdateShip(mousePos);
@@ -102,9 +103,10 @@
 			}
 
 		}
-
-		if (!isPlaying && !gameOver)
+		else if (!isPlaying && !gameOver)
 		{
+
+
 
 		}
 
@@ -119,7 +121,7 @@
 		ClearBackground(BLACK);
 		DrawText(TextFormat("Lifes: %i", P1.lifes), 0, 0, 40, WHITE);
 		DrawText(TextFormat("Score: %i", score), 900, 0, 40, WHITE);
-		DrawShip(P1);
+		DrawShip();
 		DrawBullets();
 		DrawAsteroids();
 	}

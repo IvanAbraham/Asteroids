@@ -22,3 +22,4 @@
     void UpdateAsteroids(Vector2 screenSize);
     void DrawAsteroids();
     void SpawnAsteroid(int index, Vector2 screenSize);
+    void LoadAsteroidsTexture();

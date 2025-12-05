@@ -2,7 +2,6 @@
 
 void ExecuteGame()
 {
-
 	openGame = true;
 
 	Vector2 screenSize = { 1280, 900 };
@@ -10,19 +9,18 @@ void ExecuteGame()
 	
 	InitMenuScreen(screenSize);
 	InitGameScreen(screenSize);
-
+	InitCreditsScreen(screenSize);
+	InitTutorialScreen(screenSize);
 
 	while (openGame)
 	{
-
 		Update(screenSize);
 
 		BeginDrawing();
 
-		Draw();
+		Draw(screenSize);
 
 		EndDrawing();
-
 	}
 }
 
@@ -45,6 +43,14 @@ void Update(Vector2 screenSize)
 
 		case Credits:
 
+			UpdateCreditsScreen();
+
+			break;
+
+		case Tutorial:
+
+			UpdateTuotiralScreen();
+
 			break;
 
 	}
@@ -52,20 +58,32 @@ void Update(Vector2 screenSize)
 
 }
 
-void Draw()
+void Draw(Vector2 screenSize)
 {
 	switch (currentScreen)
 	{
 
 		case Menu:
 
-			DrwMenuScreen();
+			DrawMenu(screenSize);
 
 			break;
 
 		case Game:
 
 			DrwGameScreen();
+
+			break;
+
+		case Credits:
+
+			DrwCreditsScreen();
+
+			break;
+
+		case Tutorial:
+
+			DrwTutorialScreen();
 
 			break;
 	}
