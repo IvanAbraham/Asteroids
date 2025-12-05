@@ -3,6 +3,6 @@
 int main()
 {
 
-	ExecuteGame();
+	Asteroids::ExecuteGame();
 
 }

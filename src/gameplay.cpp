@@ -7,12 +7,27 @@
 
 	int score;
 
+	Sound shoot;
+	Sound engines;
+	Sound death;
+	Sound explotion;
+
+	Texture2D paused;
+
 	void InitializeGame(Vector2 screenSize)
 	{
 		InitShip(screenSize);
 		LoadShipTexture();
 		InitAsteroids(screenSize);
 		LoadAsteroidsTexture();
+
+		paused = LoadTexture(".. /res/Sprites/Pause&Gover/Paused.png");
+
+		shoot = LoadSound("../res/sfx/Shoot.wav");
+		engines = LoadSound("../res/sfx/Engines.wav");
+		death = LoadSound("../res/sfx/Death.wav");
+		explotion = LoadSound("../res/sfx/AsteroidBoom.wav");
+
 		isPlaying = true;
 		gameOver = false;
 		score = 0;
@@ -22,7 +37,7 @@
 	void UpdateGame(Vector2 screenSize, Vector2 mousePos)
 	{
 		
-		if (IsKeyPressed(KEY_ESCAPE))
+		if (IsKeyReleased(KEY_ESCAPE))
 		{
 			isPlaying = false;
 		}
@@ -32,6 +47,16 @@
 			UpdateShip(mousePos);
 			UpdateBullets();
 			UpdateAsteroids(screenSize);
+
+			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+			{
+				PlaySound(shoot);
+			}
+
+			if (IsMouseButtonPressed(MOUSE_BUTTON_RIGHT))
+			{
+				PlaySound(engines);
+			}
 
 			if (InScreenCheck(P1.position, P1.radius, screenSize))
 			{
@@ -77,6 +102,8 @@
 
 							P1.isHurt = true;
 
+							PlaySound(death);
+
 							if (P1.lifes <= 0)
 							{
 								gameOver = true;
@@ -100,14 +127,22 @@
 			if (gameOver)
 			{
 				isPlaying = false;
+
 			}
 
 		}
 		else if (!isPlaying && !gameOver)
 		{
 
+			if (IsKeyPressed(KEY_ESCAPE))
+			{
+				currentScreen = Menu;
+			}
 
-
+			if (IsKeyPressed(KEY_ENTER) || IsKeyPressed(KEY_SPACE))
+			{
+				isPlaying = true;
+			}
 		}
 
 		if (gameOver)
@@ -118,6 +153,7 @@
 
 	void DrawGame()
 	{
+
 		ClearBackground(BLACK);
 		DrawText(TextFormat("Lifes: %i", P1.lifes), 0, 0, 40, WHITE);
 		DrawText(TextFormat("Score: %i", score), 900, 0, 40, WHITE);
@@ -134,6 +170,8 @@
 				bullet.isActive = false;
 
 				score += 10;
+
+				PlaySound(explotion);				
 			}
 	}
 

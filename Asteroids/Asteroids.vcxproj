@@ -167,19 +167,20 @@ xcopy "$(ProjectDir)res\*" "$(TargetDir)res\" /E /I /Y</Command>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\raylib-5.5_win64_msvc16\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>raylib.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
     <PostBuildEvent>
       <Command>IF NOT EXIST "$(TargetDir)res" mkdir "$(TargetDir)res"
 
 IF NOT EXIST "$(ProjectDir)res" mkdir "$(ProjectDir)res"
 
-xcopy "$(ProjectDir)res\*" "$(TargetDir)res\" /E /I /Y</Command>
+xcopy "$(ParentDirectory)\res\*" "$(TargetDir)res\" /E /I /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

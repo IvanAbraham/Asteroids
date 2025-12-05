@@ -36,12 +36,11 @@ void DrawTutorial()
 {
     ClearBackground(BLACK);
 
-    Rectangle sourceBG = { 0, 0, (float)tutorialBackgroundTexture.width, (float)tutorialBackgroundTexture.height };
-    Rectangle destBG = { 0, 0, (float)GetScreenWidth(), (float)GetScreenHeight() };
+    Rectangle sourceBG = { 0, 0, static_cast<float>(tutorialBackgroundTexture.width), static_cast<float>(tutorialBackgroundTexture.height) };
+    Rectangle destBG = { 0, 0, static_cast<float>(GetScreenWidth()), static_cast<float>(GetScreenHeight()) };
     DrawTexturePro(tutorialBackgroundTexture, sourceBG, destBG, { 0, 0 }, 0.0f, WHITE);
 
-    Rectangle sourceReturn = { 0, 0, (float)returnButtonTexture.width, (float)returnButtonTexture.height };
-    Rectangle destReturn = { returnButton.position.x, returnButton.position.y,
-                            returnButton.size.x, returnButton.size.y };
+    Rectangle sourceReturn = { 0, 0, static_cast<float>(returnButtonTexture.width), static_cast<float>(returnButtonTexture.height) };
+    Rectangle destReturn = { returnButton.position.x, returnButton.position.y, returnButton.size.x, returnButton.size.y };
     DrawTexturePro(returnButtonTexture, sourceReturn, destReturn, { 0, 0 }, 0.0f, WHITE);
 }

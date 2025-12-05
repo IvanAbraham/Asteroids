@@ -17,7 +17,6 @@ void InitializeCredits(Vector2 screenSize)
     creditsReturnButton.size.y = screenSize.y / 15.0f;
     creditsReturnButton.position.x = screenSize.x - creditsReturnButton.size.x - 50;
     creditsReturnButton.position.y = screenSize.y - creditsReturnButton.size.y - 50;
-
 }
 
 GameScreen UpdateCredits(Vector2 mousePos)
@@ -38,11 +37,11 @@ void DrawCredits()
 
     ClearBackground(BLACK);
 
-    Rectangle sourceBG = { 0, 0, (float)creditsBackgroundTexture.width, (float)creditsBackgroundTexture.height };
-    Rectangle destBG = { 0, 0, (float)GetScreenWidth(), (float)GetScreenHeight() };
+    Rectangle sourceBG = { 0, 0, static_cast<float>(creditsBackgroundTexture.width), static_cast<float>(creditsBackgroundTexture.height) };
+    Rectangle destBG = { 0, 0, static_cast<float>(GetScreenWidth()), static_cast<float>(GetScreenHeight()) };
     DrawTexturePro(creditsBackgroundTexture, sourceBG, destBG, { 0, 0 }, 0.0f, WHITE);
 
-    Rectangle sourceReturn = { 0, 0, (float)creditsReturnButtonTexture.width, (float)creditsReturnButtonTexture.height };
+    Rectangle sourceReturn = { 0, 0, static_cast<float>(creditsReturnButtonTexture.width), static_cast<float>(creditsReturnButtonTexture.height) };
     Rectangle destReturn = { creditsReturnButton.position.x, creditsReturnButton.position.y,
                             creditsReturnButton.size.x, creditsReturnButton.size.y };
     DrawTexturePro(creditsReturnButtonTexture, sourceReturn, destReturn, { 0, 0 }, 0.0f, WHITE);

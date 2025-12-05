@@ -1,92 +1,100 @@
 #include "game.h"
 
-void ExecuteGame()
+namespace Asteroids
 {
-	openGame = true;
 
-	Vector2 screenSize = { 1280, 900 };
-	InitWindow(static_cast<int>(screenSize.x), static_cast<int>(screenSize.y), "Asteroids");
+	void ExecuteGame()
+	{
+		openGame = true;
+
+		Vector2 screenSize = { 1280, 900 };
+		InitAudioDevice();
+		InitWindow(static_cast<int>(screenSize.x), static_cast<int>(screenSize.y), "Asteroids");
 	
-	InitMenuScreen(screenSize);
-	InitGameScreen(screenSize);
-	InitCreditsScreen(screenSize);
-	InitTutorialScreen(screenSize);
+		InitMenuScreen(screenSize);
+		InitGameScreen(screenSize);
+		InitCreditsScreen(screenSize);
+		InitTutorialScreen(screenSize);
 
-	while (openGame)
-	{
-		Update(screenSize);
+	
 
-		BeginDrawing();
+		while (openGame)
+		{
+			Update(screenSize);
 
-		Draw(screenSize);
+			BeginDrawing();
 
-		EndDrawing();
+			Draw(screenSize);
+
+			EndDrawing();
+		}
 	}
-}
 
-void Update(Vector2 screenSize)
-{
-	switch (currentScreen)
+	void Update(Vector2 screenSize)
 	{
+		switch (currentScreen)
+		{
 
-		case Menu:	
+			case Menu:	
 			
-			UpdMenuScreen();
+				UpdMenuScreen();
 
-			break;
+				break;
 
-		case Game:
+			case Game:
 
-			UpdGameScreen(screenSize);
+				UpdGameScreen(screenSize);
 
-			break;
+				break;
 
-		case Credits:
+			case Credits:
 
-			UpdateCreditsScreen();
+				UpdateCreditsScreen();
 
-			break;
+				break;
 
-		case Tutorial:
+			case Tutorial:
 
-			UpdateTuotiralScreen();
+				UpdateTuotiralScreen();
 
-			break;
+				break;
 
-	}
+		}
 	
 
-}
+	}
 
-void Draw(Vector2 screenSize)
-{
-	switch (currentScreen)
+	void Draw(Vector2 screenSize)
 	{
+		switch (currentScreen)
+		{
 
-		case Menu:
+			case Menu:
 
-			DrawMenu(screenSize);
+				DrawMenu(screenSize);
 
-			break;
+				break;
 
-		case Game:
+			case Game:
 
-			DrwGameScreen();
+				DrwGameScreen();
 
-			break;
+				break;
 
-		case Credits:
+			case Credits:
 
-			DrwCreditsScreen();
+				DrwCreditsScreen();
 
-			break;
+				break;
 
-		case Tutorial:
+			case Tutorial:
 
-			DrwTutorialScreen();
+				DrwTutorialScreen();
 
-			break;
-	}
+				break;
+		}
 	
+
+	}
 
 }

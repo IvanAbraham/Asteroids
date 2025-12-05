@@ -1,5 +1,18 @@
-﻿  gameplay.cpp
-  ship.cpp
-  Generando código...
-  Asteroids.vcxproj -> D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\bin\Debug\Asteroids.exe
-  0 archivo(s) copiado(s)
+﻿  Asteroids.vcxproj -> D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\bin\Debug\Asteroids.exe
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sfx\AsteroidBoom.wav
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sfx\Death.wav
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sfx\Engines.wav
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sfx\Shoot.wav
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Buttons\Back.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Buttons\Menu.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Buttons\Play.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Buttons\Quit.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Buttons\Resume.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Buttons\Tutorial.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Game\Asteroid.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Game\Ship.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Menu\Menus.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Pause&Gover\GameOver.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Pause&Gover\Paused.png
+  D:\Escritorio\Facultad\1A±o\Practica profesional\Asteroids\Asteroids\res\sprites\Tutorial\Tutorial.png
+  16 archivo(s) copiado(s)
