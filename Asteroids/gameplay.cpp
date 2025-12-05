@@ -3,6 +3,8 @@
 	bool isPlaying;
 	bool gameOver;
 
+	float invTimer = 5.0f;
+
 	void InitializeGame(Vector2 screenSize)
 	{
 		InitShip(screenSize);
@@ -37,19 +39,32 @@
 						}
 					}
 
-					if (CollisionCircleCircle(P1.position, P1.radius,
-						asteroids[i].position, asteroids[i].radius))
+					if (!P1.isHurt)
 					{
-						asteroids[i].isActive = false;
-
-						P1.lifes += -1;
-
-						if (P1.lifes <= 0)
+						if (CollisionCircleCircle(P1.position, P1.radius, asteroids[i].position, asteroids[i].radius))
 						{
-							gameOver = true;
-						}
+							asteroids[i].isActive = false;
 
+							P1.lifes += -1;
+
+							P1.isHurt = true;
+
+							if (P1.lifes <= 0)
+							{
+								gameOver = true;
+							}
+						}
 					}
+					else
+					{
+						invTimer -= GetFrameTime();
+						if (invTimer <= 0)
+						{
+							P1.isHurt = false;
+							invTimer = 2.0f;
+						}
+					}
+				
 				}
 			}
 
@@ -60,19 +75,21 @@
 
 		}
 
-		if (gameOver)
+		if (!isPlaying && !gameOver)
 		{
-			
-			currentScreen = Menu;
 
 		}
 
+		if (gameOver)
+		{
+			currentScreen = Menu;
+		}
 	}
 
 	void DrawGame()
 	{
 		ClearBackground(BLACK);
-
+		DrawText(TextFormat("Lifes: %i", P1.lifes), 0, 0, 40, WHITE);
 		DrawShip(P1);
 		DrawBullets();
 		DrawAsteroids();

@@ -5,10 +5,11 @@ Bullet bullets[maxBullets];
 
 void InitShip(Vector2 screenSize)
 {
+	P1.isHurt = false;
 	P1.lifes = 3;
 	P1.speed = 500;
 	P1.position = { screenSize.x / 2, screenSize.y / 2 };
-	P1.radius = screenSize.y / 25;
+	P1.radius = screenSize.y / 30;
 	P1.spriteSize.x = (P1.radius * 2) + 10;
 	P1.spriteSize.y = (P1.radius * 2) + 10;
 	P1.rotation = 0.0f;
@@ -96,14 +97,20 @@ void UpdateBullets()
 
 void DrawShip(Ship player)
 {
-	
-	DrawCircleLines(static_cast<int>(P1.position.x), static_cast<int>(P1.position.y), P1.radius, PINK);
-
+	if(!P1.isHurt)
+	{
+		DrawCircleLines(static_cast<int>(P1.position.x), static_cast<int>(P1.position.y), P1.radius, PINK);
+	}
+	else
+	{
+		DrawCircleLines(static_cast<int>(P1.position.x), static_cast<int>(P1.position.y), P1.radius, RED);
+	}
 	float rotationAngle = player.rotation * DEG2RAD;
 	Vector2 endPoint = {
 		player.position.x + cosf(rotationAngle) * player.radius,
 		player.position.y + sinf(rotationAngle) * player.radius
 	};
+	
 	DrawLineEx(player.position, endPoint, 2, SKYBLUE);
 
 }

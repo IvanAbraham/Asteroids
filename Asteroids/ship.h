@@ -15,6 +15,7 @@ struct Ship
 	float speed;
 	float rotation;
 	int lifes;
+	bool isHurt;
 };
 
 struct Bullet
