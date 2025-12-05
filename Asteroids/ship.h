@@ -14,6 +14,7 @@ struct Ship
 	float radius;
 	float speed;
 	float rotation;
+	int lifes;
 };
 
 struct Bullet

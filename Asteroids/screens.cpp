@@ -50,9 +50,9 @@ void UpdGameScreen(Vector2 screenSize)
 
 }
 
-void DrwGameScreen(Vector2 screenSize)
+void DrwGameScreen()
 {
 
-	DrawGame(screenSize);
+	DrawGame();
 
 }

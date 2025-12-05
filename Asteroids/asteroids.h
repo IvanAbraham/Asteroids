@@ -1,6 +1,7 @@
 #pragma once
 #include "interactions.h"
 #include <cmath>
+#include <ctime>
 
     const int maxAsteroids = 5;
 

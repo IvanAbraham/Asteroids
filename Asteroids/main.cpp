@@ -1,6 +1,6 @@
 #include "game.h"
 
-void main()
+int main()
 {
 
 	ExecuteGame();

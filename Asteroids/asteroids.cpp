@@ -1,5 +1,5 @@
 #include "asteroids.h"
-#include <ctime>
+
 
     Asteroid asteroids[maxAsteroids];
 
@@ -9,7 +9,7 @@
         static bool seedInitialized = false;
         if (!seedInitialized)
         {
-            srand(time(NULL));
+            srand(static_cast<int>(time(NULL)));
             seedInitialized = true;
         }
 
@@ -27,16 +27,16 @@
         switch (sizeType) // Three sizes
         {
         case 0: //Small size
-            asteroids[iteration].radius = 20 + (rand() % 10);
-            asteroids[iteration].speed = 200 + (rand() % 100);
+            asteroids[iteration].radius = 20.0f + (rand() % 10);
+            asteroids[iteration].speed = 200.0f + (rand() % 100);
             break;
         case 1: //Medium size
-            asteroids[iteration].radius = 35 + (rand() % 15);
-            asteroids[iteration].speed = 150 + (rand() % 80);
+            asteroids[iteration].radius = 35.0f + (rand() % 15);
+            asteroids[iteration].speed = 150.0f + (rand() % 80);
             break;
         case 2: //Big size
-            asteroids[iteration].radius = 60 + (rand() % 20);
-            asteroids[iteration].speed = 100 + (rand() % 60);
+            asteroids[iteration].radius = 60.0f + (rand() % 20);
+            asteroids[iteration].speed = 100.0f + (rand() % 60);
             break;
         }
 
@@ -46,25 +46,25 @@
         switch (edge)
         {
         case 0: //From top
-            asteroids[iteration].position.x = rand() % (int)screenSize.x;
+            asteroids[iteration].position.x = static_cast<float>(rand() % static_cast<int>(screenSize.x));
             asteroids[iteration].position.y = -margin;
             break;
         case 1: //From right
             asteroids[iteration].position.x = screenSize.x + margin;
-            asteroids[iteration].position.y = rand() % (int)screenSize.y;
+            asteroids[iteration].position.y = static_cast<float>(rand() % static_cast<int>(screenSize.y));
             break;
         case 2: //From bottom
-            asteroids[iteration].position.x = rand() % (int)screenSize.x;
+            asteroids[iteration].position.x = static_cast<float>(rand() % static_cast<int>(screenSize.x));
             asteroids[iteration].position.y = screenSize.y + margin;
             break;
         case 3: //From left
             asteroids[iteration].position.x = -margin;
-            asteroids[iteration].position.y = rand() % (int)screenSize.y;
+            asteroids[iteration].position.y = static_cast<float>(rand() % static_cast<int>(screenSize.y));
             break;
         }
 
-        asteroids[iteration].targetPosition.x = 100 + (rand() % ((int)screenSize.x - 200));
-        asteroids[iteration].targetPosition.y = 100 + (rand() % ((int)screenSize.y - 200));
+        asteroids[iteration].targetPosition.x = 100.0f + (rand() % ((int)screenSize.x - 200));
+        asteroids[iteration].targetPosition.y = 100.0f + (rand() % ((int)screenSize.y - 200));
 
         float dx = asteroids[iteration].targetPosition.x - asteroids[iteration].position.x;
         float dy = asteroids[iteration].targetPosition.y - asteroids[iteration].position.y;
@@ -130,8 +130,7 @@
         {
             if (asteroids[i].isActive)
             {
-                DrawCircleLines(asteroids[i].position.x, asteroids[i].position.y,
-                    asteroids[i].radius, WHITE);
+                DrawCircleLines(static_cast<int>(asteroids[i].position.x), static_cast<int>(asteroids[i].position.y), asteroids[i].radius, WHITE);
 
             }
         }

@@ -5,6 +5,7 @@ Bullet bullets[maxBullets];
 
 void InitShip(Vector2 screenSize)
 {
+	P1.lifes = 3;
 	P1.speed = 500;
 	P1.position = { screenSize.x / 2, screenSize.y / 2 };
 	P1.radius = screenSize.y / 25;
@@ -63,8 +64,8 @@ void ShootBullet(Vector2 shipPos, float shipRotation)
 		{
 			bullets[i].isActive = true;
 			bullets[i].position = shipPos;
-			bullets[i].radius = P1.radius * 0.25;
-			bullets[i].speed = 1000;
+			bullets[i].radius = P1.radius * 0.25f;
+			bullets[i].speed = 1000.0f;
 
 			float bulletAngle = shipRotation * DEG2RAD;
 			bullets[i].velocity.x = cosf(bulletAngle) * bullets[i].speed;
@@ -96,7 +97,7 @@ void UpdateBullets()
 void DrawShip(Ship player)
 {
 	
-	DrawCircleLines(P1.position.x, P1.position.y, P1.radius, PINK);
+	DrawCircleLines(static_cast<int>(P1.position.x), static_cast<int>(P1.position.y), P1.radius, PINK);
 
 	float rotationAngle = player.rotation * DEG2RAD;
 	Vector2 endPoint = {

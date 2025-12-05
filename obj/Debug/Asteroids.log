@@ -1,17 +1,2 @@
-﻿  asteroids.cpp
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(12,23): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(30,46): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(31,46): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(34,46): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(35,46): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(38,46): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(39,46): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(49,54): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(54,54): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(57,54): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(62,54): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(66,53): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(67,53): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(133,79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\Asteroids\asteroids.cpp(133,54): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+﻿  gameplay.cpp
   Asteroids.vcxproj -> D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\bin\Debug\Asteroids.exe

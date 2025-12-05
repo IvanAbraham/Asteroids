@@ -18,7 +18,7 @@ void DrwMenuScreen();
 
 void InitGameScreen(Vector2 screenSize);
 void UpdGameScreen(Vector2 screenSize);
-void DrwGameScreen(Vector2 screenSize);
+void DrwGameScreen();
 
 void UpdateCredits();
 void DrawCredcits();
