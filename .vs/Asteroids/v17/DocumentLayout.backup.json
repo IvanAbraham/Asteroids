@@ -58,8 +58,7 @@
               "RelativeToolTip": "Asteroids\\gamestates.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-05T06:15:33.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T06:15:33.211Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "Asteroids\\screens.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-05T06:13:21.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T06:13:21.75Z"
             },
             {
               "$type": "Document",
@@ -84,8 +82,7 @@
               "RelativeToolTip": "Asteroids\\gameplay.cpp",
               "ViewState": "AgIAABIAAAAAAAAAAAAAADQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-05T05:24:12.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T05:24:12.937Z"
             },
             {
               "$type": "Document",
@@ -93,9 +90,9 @@
               "Title": "ship.cpp",
               "DocumentMoniker": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.cpp",
               "RelativeDocumentMoniker": "Asteroids\\ship.cpp",
-              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.cpp*",
-              "RelativeToolTip": "Asteroids\\ship.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "ToolTip": "D:\\Escritorio\\Facultad\\1A\u00F1o\\Practica profesional\\Asteroids\\Asteroids\\ship.cpp",
+              "RelativeToolTip": "Asteroids\\ship.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-05T06:05:03.307Z",
               "EditorCaption": ""
@@ -110,8 +107,7 @@
               "RelativeToolTip": "Asteroids\\asteroids.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-05T06:05:31.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T06:05:31.975Z"
             }
           ]
         },
@@ -129,8 +125,7 @@
               "RelativeToolTip": "Asteroids\\screens.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-05T06:15:09.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T06:15:09.371Z"
             },
             {
               "$type": "Document",
@@ -142,8 +137,7 @@
               "RelativeToolTip": "Asteroids\\gameplay.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-05T05:24:16.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T05:24:16.282Z"
             },
             {
               "$type": "Document",
@@ -168,8 +162,7 @@
               "RelativeToolTip": "Asteroids\\asteroids.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-05T06:05:20.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T06:05:20.59Z"
             }
           ]
         }

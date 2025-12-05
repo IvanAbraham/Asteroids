@@ -1,2 +1,10 @@
-﻿  ship.cpp
+﻿  asteroids.cpp
+  game.cpp
+  gameplay.cpp
+  interactions.cpp
+  main.cpp
+  menu.cpp
+  screens.cpp
+  ship.cpp
+  Generando código...
   Asteroids.vcxproj -> D:\Escritorio\Facultad\1Año\Practica profesional\Asteroids\bin\Debug\Asteroids.exe
