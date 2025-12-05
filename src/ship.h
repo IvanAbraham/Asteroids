@@ -11,6 +11,7 @@ struct Ship
 	Vector2 spriteSize;
 	Vector2 position;
 	Vector2 targetPosition;
+	Vector2 velocity;
 	float radius;
 	float speed;
 	float rotation;

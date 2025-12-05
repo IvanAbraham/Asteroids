@@ -3,7 +3,9 @@
 	bool isPlaying;
 	bool gameOver;
 
-	float invTimer = 5.0f;
+	float invTimer;;
+
+	int score;
 
 	void InitializeGame(Vector2 screenSize)
 	{
@@ -11,6 +13,9 @@
 		InitAsteroids(screenSize);
 		isPlaying = true;
 		gameOver = false;
+
+		score = 0;
+		invTimer = 5.0f;
 	}
 
 	void UpdateGame(Vector2 screenSize, Vector2 mousePos)
@@ -27,9 +32,31 @@
 			UpdateBullets();
 			UpdateAsteroids(screenSize);
 
+			if (InScreenCheck(P1.position, P1.radius, screenSize))
+			{
+				if (P1.position.x + P1.radius < 0)
+				{
+					P1.position.x = screenSize.x - P1.radius;
+				}
+				else if (P1.position.x - P1.radius > screenSize.x)
+				{
+					P1.position.x = 0;
+				}
+				
+				if (P1.position.y > screenSize.y + P1.radius)
+				{
+					P1.position.y = 0;
+				}
+				else if (P1.position.y + P1.radius < 0)
+				{
+					P1.position.y = screenSize.y - P1.radius;
+				}
+			}
+
+			//Collisions between objects
 			for (int i = 0; i < maxAsteroids; i++)
 			{
-				if (asteroids[i].isActive)
+				if (asteroids[i].isActive) 
 				{
 					for (int j = 0; j < maxBullets; j++)
 					{
@@ -55,6 +82,7 @@
 							}
 						}
 					}
+					
 					else
 					{
 						invTimer -= GetFrameTime();
@@ -90,6 +118,7 @@
 	{
 		ClearBackground(BLACK);
 		DrawText(TextFormat("Lifes: %i", P1.lifes), 0, 0, 40, WHITE);
+		DrawText(TextFormat("Score: %i", score), 900, 0, 40, WHITE);
 		DrawShip(P1);
 		DrawBullets();
 		DrawAsteroids();
@@ -101,6 +130,8 @@
 			{
 				asteroid.isActive = false;
 				bullet.isActive = false;
+
+				score += 10;
 			}
 	}
 

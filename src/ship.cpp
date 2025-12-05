@@ -23,15 +23,22 @@ void InitShip(Vector2 screenSize)
 
 void UpdateShip(Vector2 mousePos)
 {
-	if (IsMouseButtonDown(MOUSE_BUTTON_RIGHT))
-	{
-		P1.targetPosition = GetMousePosition();	
-	}
-	
-	Vector2 dif = {mousePos.x - P1.position.x, mousePos.y - P1.position.y};
+	float const acceleration = 2000.0f;
+
+	Vector2 dif = { mousePos.x - P1.position.x, mousePos.y - P1.position.y };
 	P1.rotation = atan2f(dif.y, dif.x) * RAD2DEG;
 
-	MoveShip(P1.targetPosition, P1.position, P1.speed);
+	if (IsMouseButtonDown(MOUSE_BUTTON_RIGHT))
+	{
+		float rotationAngle = P1.rotation * DEG2RAD;
+		Vector2 direction = { cosf(rotationAngle), sinf(rotationAngle) };
+
+		P1.velocity.x += direction.x * acceleration * GetFrameTime();
+		P1.velocity.y += direction.y * acceleration * GetFrameTime();
+	}
+
+	P1.position.x += P1.velocity.x * GetFrameTime();
+	P1.position.y += P1.velocity.y * GetFrameTime();
 
 	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
@@ -39,23 +46,6 @@ void UpdateShip(Vector2 mousePos)
 	}
 } 
 
-void MoveShip(Vector2 targetPos, Vector2 &currentPos, float speed)
-{
-
-	float dx = targetPos.x - currentPos.x;
-	float dy = targetPos.y - currentPos.y;
-	float distance = sqrtf(dx * dx + dy * dy);
-
-	if (distance > 0)
-	{
-		float directionX = dx / distance;
-		float directionY = dy / distance;
-
-		currentPos.x += directionX * speed * GetFrameTime();
-		currentPos.y += directionY * speed * GetFrameTime();
-	}
-
-}
 
 void ShootBullet(Vector2 shipPos, float shipRotation)
 {
