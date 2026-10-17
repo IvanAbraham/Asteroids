@@ -6,7 +6,6 @@ Texture2D asteroidsTexture;
 
     void InitAsteroids(Vector2 screenSize)
     {
-
         static bool seedInitialized = false;
         if (!seedInitialized)
         {
@@ -20,6 +19,27 @@ Texture2D asteroidsTexture;
         }
     }
 
+    void SetAsteroidSize(Asteroid& asteroid, Size size)
+    {
+        switch (size)
+        {
+        case small: 
+            asteroid.radius = 20.0f + (rand() % 10);
+            asteroid.speed = 200.0f + (rand() % 100);
+            break;
+
+        case medium: 
+            asteroid.radius = 35.0f + (rand() % 15);
+            asteroid.speed = 150.0f + (rand() % 80);
+            break;
+
+        case big: asteroid.radius = 60.0f + (rand() % 20);
+            asteroid.speed = 100.0f + (rand() % 60);
+            break;
+        }
+        asteroid.size = size;
+    }
+    
     void LoadAsteroidsTexture()
     {
         asteroidsTexture = LoadTexture("../res/sprites/Game/Asteroid.png");
@@ -29,22 +49,9 @@ Texture2D asteroidsTexture;
     {
         asteroids[iteration].isActive = true;
 
-        int sizeType = rand() % 3;
-        switch (sizeType) // Three sizes
-        {
-        case 0: //Small size
-            asteroids[iteration].radius = 20.0f + (rand() % 10);
-            asteroids[iteration].speed = 200.0f + (rand() % 100);
-            break;
-        case 1: //Medium size
-            asteroids[iteration].radius = 35.0f + (rand() % 15);
-            asteroids[iteration].speed = 150.0f + (rand() % 80);
-            break;
-        case 2: //Big size
-            asteroids[iteration].radius = 60.0f + (rand() % 20);
-            asteroids[iteration].speed = 100.0f + (rand() % 60);
-            break;
-        }
+        Size sizeType = static_cast<Size>(rand() % 3);
+        
+        SetAsteroidSize(asteroids[iteration], sizeType);
 
         int edge = rand() % 4;
         float margin = asteroids[iteration].radius + 50;
