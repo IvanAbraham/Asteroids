@@ -7,7 +7,7 @@ namespace Asteroids
 	{
 		openGame = true;
 
-		Vector2 screenSize = { 1280, 900 };
+		Vector2 screenSize = { 1024, 768 };
 		InitAudioDevice();
 		InitWindow(static_cast<int>(screenSize.x), static_cast<int>(screenSize.y), "Asteroids");
 	

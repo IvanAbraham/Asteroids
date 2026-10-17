@@ -85,8 +85,8 @@ void UpdateBullets()
 			bullets[i].position.y += bullets[i].velocity.y * GetFrameTime();
 		}
 
-		if (bullets[i].position.x < 0 - bullets[i].radius || bullets[i].position.x > 1280 ||
-			bullets[i].position.y < 0 - bullets[i].radius || bullets[i].position.y > 900)
+		if (bullets[i].position.x < 0 - bullets[i].radius || bullets[i].position.x > 1024 ||
+			bullets[i].position.y < 0 - bullets[i].radius || bullets[i].position.y > 768)
 		{
 			bullets[i].isActive = false;
 		}
