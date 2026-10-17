@@ -2,3 +2,6 @@
 Debug/
 Asteroids/Debug/
 bin/
+obj/
+x64/
+*.pdf

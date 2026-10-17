@@ -149,10 +149,7 @@
     </Link>
     <PostBuildEvent>
       <Command>IF NOT EXIST "$(TargetDir)res" mkdir "$(TargetDir)res"
-
-IF NOT EXIST "$(ProjectDir)res" mkdir "$(ProjectDir)res"
-
-xcopy "$(ProjectDir)res\*" "$(TargetDir)res\" /E /I /Y</Command>
+  xcopy "$(SolutionDir)res\*" "$(TargetDir)res\" /E /I /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -177,10 +174,7 @@ xcopy "$(ProjectDir)res\*" "$(TargetDir)res\" /E /I /Y</Command>
     </Link>
     <PostBuildEvent>
       <Command>IF NOT EXIST "$(TargetDir)res" mkdir "$(TargetDir)res"
-
-IF NOT EXIST "$(ProjectDir)res" mkdir "$(ProjectDir)res"
-
-xcopy "$(ParentDirectory)\res\*" "$(TargetDir)res\" /E /I /Y</Command>
+  xcopy "$(SolutionDir)res\*" "$(TargetDir)res\" /E /I /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
