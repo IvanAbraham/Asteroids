@@ -5,6 +5,7 @@
 #include <cmath>
 
 int const maxBullets = 30;
+float const invDuration = 2.0f;
 
 struct Ship
 {
@@ -17,6 +18,7 @@ struct Ship
 	float rotation;
 	int lifes;
 	bool isHurt;
+	float invTimer;
 };
 
 struct Bullet

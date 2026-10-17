@@ -3,8 +3,6 @@
 	bool isPlaying;
 	bool gameOver;
 
-	float invTimer;
-
 	int score;
 
 	Sound shoot;
@@ -31,7 +29,6 @@
 		isPlaying = true;
 		gameOver = false;
 		score = 0;
-		invTimer = 5.0f;
 	}
 
 	void UpdateGame(Vector2 screenSize, Vector2 mousePos)
@@ -101,23 +98,13 @@
 							P1.lifes += -1;
 
 							P1.isHurt = true;
-
+							P1.invTimer = invDuration;
 							PlaySound(death);
 
 							if (P1.lifes <= 0)
 							{
 								gameOver = true;
 							}
-						}
-					}
-					
-					else
-					{
-						invTimer -= GetFrameTime();
-						if (invTimer <= 0)
-						{
-							P1.isHurt = false;
-							invTimer = 2.0f;
 						}
 					}
 				

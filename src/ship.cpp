@@ -7,7 +7,7 @@ Texture2D playerTexture;
 
 void InitShip(Vector2 screenSize)
 {
-	P1.isHurt = false;
+	P1.isHurt = true;
 	P1.lifes = 3;
 	P1.speed = 500;
 	P1.position = { screenSize.x / 2, screenSize.y / 2 };
@@ -17,6 +17,7 @@ void InitShip(Vector2 screenSize)
 	P1.rotation = 0.0f;
 	P1.velocity = { 0.0f, 0.0f };
 	P1.targetPosition = P1.position;
+	P1.invTimer = 5.0f;
 
 	for (int i = 0; i < maxBullets; i++)
 	{
@@ -51,6 +52,16 @@ void UpdateShip(Vector2 mousePos)
 	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 	{
 		ShootBullet(P1.position, P1.rotation);
+	}
+
+	if (P1.isHurt)
+	{
+		P1.invTimer -= GetFrameTime();
+
+		if (P1.invTimer <= 0)
+		{
+			P1.isHurt = false;
+		}
 	}
 } 
 
