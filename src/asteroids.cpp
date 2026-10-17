@@ -87,6 +87,18 @@ Texture2D asteroidsTexture;
         asteroids[iteration].velocity.y = sinf(angle) * asteroids[iteration].speed;
     }
 
+    void SpawnFragment(int index, Size size, Vector2 position, Vector2 direction)
+    {
+        asteroids[index].isActive = true;
+
+        SetAsteroidSize(asteroids[index], size);
+
+        asteroids[index].position = position;
+
+        Vector2 normalizedDir = Vector2Normalize(direction);
+        asteroids[index].velocity = Vector2Scale(normalizedDir, asteroids[index].speed);
+    }
+
     void UpdateAsteroids(Vector2 screenSize)
     {
 
