@@ -81,31 +81,19 @@
 			{
 				if (asteroids[i].isActive) 
 				{
+					//Bullet collisions
 					for (int j = 0; j < maxBullets; j++)
 					{
 						if (bullets[j].isActive)
 						{
-							Collision(asteroids[i], bullets[j]);
+							if (BulletCollision(asteroids[i], bullets[j]))
+								break;
 						}
 					}
-
-					if (!P1.isHurt)
+					//Ship collisions
+					if (!P1.isHurt && asteroids[i].isActive)
 					{
-						if (CollisionCircleCircle(P1.position, P1.radius, asteroids[i].position, asteroids[i].radius))
-						{
-							asteroids[i].isActive = false;
-
-							P1.lifes += -1;
-
-							P1.isHurt = true;
-							P1.invTimer = invDuration;
-							PlaySound(death);
-
-							if (P1.lifes <= 0)
-							{
-								gameOver = true;
-							}
-						}
+						ShipCollision(P1, asteroids[i]);
 					}
 				
 				}
@@ -140,7 +128,6 @@
 
 	void DrawGame()
 	{
-
 		ClearBackground(BLACK);
 		DrawText(TextFormat("Lifes: %i", P1.lifes), 0, 0, 40, WHITE);
 		DrawText(TextFormat("Score: %i", score), 900, 0, 40, WHITE);
@@ -149,16 +136,35 @@
 		DrawAsteroids();
 	}
 
-	void Collision(Asteroid& asteroid, Bullet& bullet)
+	bool BulletCollision(Asteroid& asteroid, Bullet& bullet)
 	{
 			if (CollisionCircleCircle(asteroid.position, asteroid.radius, bullet.position, bullet.radius))
 			{
 				SplitAsteroid(asteroid);
 				bullet.isActive = false;
-
 				score += 10;
+				PlaySound(explotion);		
 
-				PlaySound(explotion);				
+				return true;
 			}
+			return false;
 	}
 
+	void ShipCollision(Ship& ship, Asteroid& asteroid)
+	{
+		if (CollisionCircleCircle(ship.position, ship.radius, asteroid.position, asteroid.radius))
+		{
+			asteroid.isActive = false;
+
+			ship.lifes += -1;
+
+			ship.isHurt = true;
+			ship.invTimer = invDuration;
+			PlaySound(death);
+
+			if (ship.lifes <= 0)
+			{
+				gameOver = true;
+			}
+		}
+	}
