@@ -4,7 +4,9 @@
 #include <ctime>
 #include "raymath.h"
 
-const int maxAsteroids = 20;
+int const maxAsteroids = 20;
+int const screenAsteroids = 5;
+float const timeBetweenSpawns = 2.0f;
 enum Size { small = 0, medium, big };
 
 struct Asteroid
@@ -30,3 +32,4 @@ struct Asteroid
     void SpawnAsteroid(int index, Vector2 screenSize);
     void LoadAsteroidsTexture();
     int FindFreeAsteroid();
+    int FindActiveAsteroids();

@@ -3,10 +3,13 @@
 
 Asteroid asteroids[maxAsteroids];
 Texture2D asteroidsTexture;
+float spawnTimer = 0.0f;
 
     void InitAsteroids(Vector2 screenSize)
     {
         static bool seedInitialized = false;
+        int const startingAsteroids = 2;
+
         if (!seedInitialized)
         {
             srand(static_cast<int>(time(NULL)));
@@ -14,6 +17,13 @@ Texture2D asteroidsTexture;
         }
 
         for (int i = 0; i < maxAsteroids; i++)
+        {
+            asteroids[i].isActive = false;
+        }
+
+        spawnTimer = 0;
+
+        for (int i = 0; i < startingAsteroids; i++)
         {
             SpawnAsteroid(i, screenSize);
         }
@@ -134,18 +144,18 @@ Texture2D asteroidsTexture;
                 }
             }
 
-            else
-            {
-                static float respawnTimer[maxAsteroids] = { 0 };
-                respawnTimer[i] += GetFrameTime();
+        }
 
-                if (respawnTimer[i] > 1.0)
-                {
-                    SpawnAsteroid(i, screenSize);
-                    respawnTimer[i] = 0;
-                }
-            }
+        spawnTimer += GetFrameTime();
 
+        if (spawnTimer > timeBetweenSpawns)
+        {
+            int index = FindFreeAsteroid();
+
+            if (index != -1 && FindActiveAsteroids() < screenAsteroids)
+                SpawnAsteroid(index, screenSize);
+
+            spawnTimer = 0;
         }
     }
 
@@ -173,6 +183,19 @@ Texture2D asteroidsTexture;
         }
 
         return -1;
+    }
+    
+    int FindActiveAsteroids()
+    {
+        int activeAsteroids = 0;
+
+        for (int i = 0; i < maxAsteroids; i++)
+        {
+            if (asteroids[i].isActive)
+                activeAsteroids++;
+        }
+
+        return activeAsteroids;
     }
 
     void SplitAsteroid(Asteroid& asteroid)
