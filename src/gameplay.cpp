@@ -77,27 +77,8 @@
 			}
 
 			//Collisions between objects
-			for (int i = 0; i < maxAsteroids; i++)
-			{
-				if (asteroids[i].isActive) 
-				{
-					//Bullet collisions
-					for (int j = 0; j < maxBullets; j++)
-					{
-						if (bullets[j].isActive)
-						{
-							if (BulletCollision(asteroids[i], bullets[j]))
-								break;
-						}
-					}
-					//Ship collisions
-					if (!P1.isHurt && asteroids[i].isActive)
-					{
-						ShipCollision(P1, asteroids[i]);
-					}
-				
-				}
-			}
+			
+			CheckCollisions();
 
 			if (gameOver)
 			{
@@ -134,6 +115,31 @@
 		DrawShip();
 		DrawBullets();
 		DrawAsteroids();
+	}
+
+	void CheckCollisions()
+	{
+		for (int i = 0; i < maxAsteroids; i++)
+		{
+			if (asteroids[i].isActive)
+			{
+				//Bullet collisions
+				for (int j = 0; j < maxBullets; j++)
+				{
+					if (bullets[j].isActive)
+					{
+						if (BulletCollision(asteroids[i], bullets[j]))
+							break;
+					}
+				}
+				//Ship collisions
+				if (!P1.isHurt && asteroids[i].isActive)
+				{
+					ShipCollision(P1, asteroids[i]);
+				}
+
+			}
+		}
 	}
 
 	bool BulletCollision(Asteroid& asteroid, Bullet& bullet)

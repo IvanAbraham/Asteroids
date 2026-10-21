@@ -6,5 +6,6 @@
 	void InitializeGame(Vector2 screenSize);
 	void UpdateGame(Vector2 screenSize, Vector2 mousePos);
 	void DrawGame();
+	void CheckCollisions();
 	bool BulletCollision(Asteroid& asteroid, Bullet& bullet);
 	void ShipCollision(Ship& ship, Asteroid& asteroid);
