@@ -45,46 +45,46 @@ Texture2D asteroidsTexture;
         asteroidsTexture = LoadTexture("../res/sprites/Game/Asteroid.png");
     }
 
-    void SpawnAsteroid(int iteration, Vector2 screenSize)
+    void SpawnAsteroid(int index, Vector2 screenSize)
     {
-        asteroids[iteration].isActive = true;
+        asteroids[index].isActive = true;
 
         Size sizeType = static_cast<Size>(rand() % 3);
         
-        SetAsteroidSize(asteroids[iteration], sizeType);
+        SetAsteroidSize(asteroids[index], sizeType);
 
         int edge = rand() % 4;
-        float margin = asteroids[iteration].radius + 50;
+        float margin = asteroids[index].radius + 50;
 
         switch (edge)
         {
         case 0: //From top
-            asteroids[iteration].position.x = static_cast<float>(rand() % static_cast<int>(screenSize.x));
-            asteroids[iteration].position.y = -margin;
+            asteroids[index].position.x = static_cast<float>(rand() % static_cast<int>(screenSize.x));
+            asteroids[index].position.y = -margin;
             break;
         case 1: //From right
-            asteroids[iteration].position.x = screenSize.x + margin;
-            asteroids[iteration].position.y = static_cast<float>(rand() % static_cast<int>(screenSize.y));
+            asteroids[index].position.x = screenSize.x + margin;
+            asteroids[index].position.y = static_cast<float>(rand() % static_cast<int>(screenSize.y));
             break;
         case 2: //From bottom
-            asteroids[iteration].position.x = static_cast<float>(rand() % static_cast<int>(screenSize.x));
-            asteroids[iteration].position.y = screenSize.y + margin;
+            asteroids[index].position.x = static_cast<float>(rand() % static_cast<int>(screenSize.x));
+            asteroids[index].position.y = screenSize.y + margin;
             break;
         case 3: //From left
-            asteroids[iteration].position.x = -margin;
-            asteroids[iteration].position.y = static_cast<float>(rand() % static_cast<int>(screenSize.y));
+            asteroids[index].position.x = -margin;
+            asteroids[index].position.y = static_cast<float>(rand() % static_cast<int>(screenSize.y));
             break;
         }
 
-        asteroids[iteration].targetPosition.x = 100.0f + (rand() % ((int)screenSize.x - 200));
-        asteroids[iteration].targetPosition.y = 100.0f + (rand() % ((int)screenSize.y - 200));
+        asteroids[index].targetPosition.x = 100.0f + (rand() % ((int)screenSize.x - 200));
+        asteroids[index].targetPosition.y = 100.0f + (rand() % ((int)screenSize.y - 200));
 
-        float dx = asteroids[iteration].targetPosition.x - asteroids[iteration].position.x;
-        float dy = asteroids[iteration].targetPosition.y - asteroids[iteration].position.y;
+        float dx = asteroids[index].targetPosition.x - asteroids[index].position.x;
+        float dy = asteroids[index].targetPosition.y - asteroids[index].position.y;
         float angle = atan2f(dy, dx);
 
-        asteroids[iteration].velocity.x = cosf(angle) * asteroids[iteration].speed;
-        asteroids[iteration].velocity.y = sinf(angle) * asteroids[iteration].speed;
+        asteroids[index].velocity.x = cosf(angle) * asteroids[index].speed;
+        asteroids[index].velocity.y = sinf(angle) * asteroids[index].speed;
     }
 
     void SpawnFragment(int index, Size size, Vector2 position, Vector2 direction)
@@ -163,3 +163,45 @@ Texture2D asteroidsTexture;
             }
         }
     }
+
+    int FindFreeAsteroid()
+    {
+        for (int i = 0; i < maxAsteroids; i++)
+        {
+            if (!asteroids[i].isActive)
+                return i;
+        }
+
+        return -1;
+    }
+
+    void SplitAsteroid(Asteroid& asteroid)
+    {
+        int const fragAmount = 2;
+        float const fragmentAngle = 30.0f;
+        float angle = fragmentAngle;
+
+        Asteroid parent = asteroid;
+        asteroid.isActive = false;
+
+        if (parent.size == big)
+            parent.size = medium;
+        else if (parent.size == medium)
+            parent.size = small;
+        else
+            return;
+        
+        for (int i = 0; i < fragAmount; i++)
+        {
+            int index = FindFreeAsteroid();
+
+            if (index != -1)
+            {
+                if (i % 2 != 0)
+                    angle = -fragmentAngle;
+                
+                SpawnFragment(index, parent.size, parent.position, Vector2Rotate(parent.velocity, angle * DEG2RAD));
+            }
+        }
+    }
+      

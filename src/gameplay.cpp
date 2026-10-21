@@ -153,7 +153,7 @@
 	{
 			if (CollisionCircleCircle(asteroid.position, asteroid.radius, bullet.position, bullet.radius))
 			{
-				asteroid.isActive = false;
+				SplitAsteroid(asteroid);
 				bullet.isActive = false;
 
 				score += 10;

@@ -24,7 +24,9 @@ struct Asteroid
     void InitAsteroids(Vector2 screenSize);
     void SetAsteroidSize(Asteroid& asteroid, Size size);
     void SpawnFragment(int index, Size size, Vector2 position, Vector2 direction);
+    void SplitAsteroid(Asteroid& asteroid);
     void UpdateAsteroids(Vector2 screenSize);
     void DrawAsteroids();
     void SpawnAsteroid(int index, Vector2 screenSize);
     void LoadAsteroidsTexture();
+    int FindFreeAsteroid();
