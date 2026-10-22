@@ -12,3 +12,4 @@ void InitializeCredits(Vector2 screenSize);
 GameScreen UpdateCredits(Vector2 mousePos);
 void DrawCredits();
 void LoadCreditsTextures();
+void UnloadCreditsTextures();

@@ -31,6 +31,17 @@
 		score = 0;
 	}
 
+	void UnloadGame()
+	{
+		UnloadShipTexture();
+		UnloadAsteroidsTexture();
+		UnloadTexture(paused);
+		UnloadSound(shoot);
+		UnloadSound(engines);
+		UnloadSound(death);
+		UnloadSound(explotion);
+	}
+
 	void UpdateGame(Vector2 screenSize, Vector2 mousePos)
 	{
 		

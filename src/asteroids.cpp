@@ -1,6 +1,5 @@
 #include "asteroids.h"
 
-
 Asteroid asteroids[maxAsteroids];
 Texture2D asteroidsTexture;
 float spawnTimer = 0.0f;
@@ -53,6 +52,11 @@ float spawnTimer = 0.0f;
     void LoadAsteroidsTexture()
     {
         asteroidsTexture = LoadTexture("../res/sprites/Game/Asteroid.png");
+    }
+
+    void UnloadAsteroidsTexture()
+    {
+        UnloadTexture(asteroidsTexture);
     }
 
     void SpawnAsteroid(int index, Vector2 screenSize)

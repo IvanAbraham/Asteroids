@@ -2,7 +2,6 @@
 
 namespace Asteroids
 {
-
 	void ExecuteGame()
 	{
 		openGame = true;
@@ -14,11 +13,9 @@ namespace Asteroids
 		InitMenuScreen(screenSize);
 		InitGameScreen(screenSize);
 		InitCreditsScreen(screenSize);
-		InitTutorialScreen(screenSize);
-
-	
-
-		while (openGame)
+		InitTutorialScreen(screenSize);	
+		SetExitKey(KEY_NULL);
+		while (openGame && !WindowShouldClose())
 		{
 			Update(screenSize);
 
@@ -28,6 +25,14 @@ namespace Asteroids
 
 			EndDrawing();
 		}
+
+		UnloadMenuTextures();
+		UnloadTutorialTextures();
+		UnloadCreditsTextures();
+		UnloadGame();
+
+		CloseAudioDevice();
+		CloseWindow();
 	}
 
 	void Update(Vector2 screenSize)
@@ -93,8 +98,5 @@ namespace Asteroids
 
 				break;
 		}
-	
-
 	}
-
 }

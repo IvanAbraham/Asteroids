@@ -11,6 +11,12 @@ void LoadTutorialTextures()
     returnButtonTexture = LoadTexture("../res/sprites/Buttons/Back.png");
 }
 
+void UnloadTutorialTextures()
+{
+    UnloadTexture(tutorialBackgroundTexture);
+    UnloadTexture(returnButtonTexture);
+}
+
 void InitializeTutorial(Vector2 screenSize)
 {
     returnButton.size.x = screenSize.x / 5.0f;

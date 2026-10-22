@@ -30,6 +30,11 @@ void LoadShipTexture()
 	playerTexture = LoadTexture("../res/sprites/Game/Ship.png");
 }
 
+void UnloadShipTexture()
+{
+	UnloadTexture(playerTexture);
+}
+
 void UpdateShip(Vector2 mousePos)
 {
 	float const acceleration = 2000.0f;
@@ -133,3 +138,4 @@ void DrawBullets()
 	}
 
 }
+

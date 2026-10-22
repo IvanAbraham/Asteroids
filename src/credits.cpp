@@ -11,6 +11,12 @@ void LoadCreditsTextures()
     creditsReturnButtonTexture = LoadTexture("../res/sprites/Buttons/Back.png");
 }
 
+void UnloadCreditsTextures()
+{
+    UnloadTexture(creditsBackgroundTexture);
+    UnloadTexture(creditsReturnButtonTexture);
+}
+
 void InitializeCredits(Vector2 screenSize)
 {
     creditsReturnButton.size.x = screenSize.x / 5.0f;

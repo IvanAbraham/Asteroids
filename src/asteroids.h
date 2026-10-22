@@ -31,5 +31,6 @@ struct Asteroid
     void DrawAsteroids();
     void SpawnAsteroid(int index, Vector2 screenSize);
     void LoadAsteroidsTexture();
+    void UnloadAsteroidsTexture();
     int FindFreeAsteroid();
     int FindActiveAsteroids();

@@ -12,3 +12,4 @@ void InitializeTutorial(Vector2 screenSize);
 GameScreen UpdateTutorial(Vector2 mousePos);
 void DrawTutorial();
 void LoadTutorialTextures();
+void UnloadTutorialTextures();

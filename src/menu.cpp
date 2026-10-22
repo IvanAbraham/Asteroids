@@ -116,3 +116,12 @@ void LoadMenuTextures()
     quitTexture = LoadTexture("../res/sprites/Buttons/Quit.png");
 
 }
+
+void UnloadMenuTextures()
+{
+    UnloadTexture(menuTexture);
+    UnloadTexture(startTexture);
+    UnloadTexture(tutorialTexture);
+    UnloadTexture(creditsTexture);
+    UnloadTexture(quitTexture);
+}

@@ -9,3 +9,4 @@
 	void CheckCollisions();
 	bool BulletCollision(Asteroid& asteroid, Bullet& bullet);
 	void ShipCollision(Ship& ship, Asteroid& asteroid);
+	void UnloadGame();
