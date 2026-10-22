@@ -5,7 +5,6 @@ Buttons startButton = {};
 Buttons tutorialButton = {};
 Buttons creditsButton = {};
 Buttons quitButton = {};
-
 Texture2D menuTexture;
 Texture2D startTexture;
 Texture2D tutorialTexture;
@@ -50,7 +49,7 @@ GameScreen UpdateMenu(Vector2 mousePos)
 
         if (CollisionPointRec(mousePos, startButton.position, startButton.size))
         {
-
+            
             return Game;
 
         }

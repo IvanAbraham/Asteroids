@@ -15,6 +15,7 @@ namespace Asteroids
 		InitCreditsScreen(screenSize);
 		InitTutorialScreen(screenSize);	
 		SetExitKey(KEY_NULL);
+
 		while (openGame && !WindowShouldClose())
 		{
 			Update(screenSize);
@@ -42,7 +43,7 @@ namespace Asteroids
 
 			case Menu:	
 			
-				UpdMenuScreen();
+				UpdMenuScreen(screenSize);
 
 				break;
 

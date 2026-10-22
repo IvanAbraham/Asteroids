@@ -4,6 +4,8 @@
 #include "gamestates.h"
 
 	void InitializeGame(Vector2 screenSize);
+	void LoadGame();
+	void ResetGame(Vector2 screenSize);
 	void UpdateGame(Vector2 screenSize, Vector2 mousePos);
 	void DrawGame();
 	void CheckCollisions();

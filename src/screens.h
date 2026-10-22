@@ -6,16 +6,14 @@
 
 struct Mouse
 {
-
 	Vector2 hitBox;
 	Vector2 position;
-
 };
 
 extern bool openGame;
 
 void InitMenuScreen(Vector2 screenSize);
-void UpdMenuScreen();
+void UpdMenuScreen(Vector2 screenSize);
 void DrwMenuScreen(Vector2 screenSize);
 
 void InitGameScreen(Vector2 screenSize);

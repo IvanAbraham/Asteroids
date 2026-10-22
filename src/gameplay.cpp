@@ -14,20 +14,31 @@
 
 	void InitializeGame(Vector2 screenSize)
 	{
-		InitShip(screenSize);
-		LoadShipTexture();
-		InitAsteroids(screenSize);
-		LoadAsteroidsTexture();
+		LoadGame();
 
+		ResetGame(screenSize);
+	}
+
+	void ResetGame(Vector2 screenSize)
+	{
+		isPlaying = true;
+		gameOver = false;
+		score = 0;
+
+		InitShip(screenSize);
+		InitAsteroids(screenSize);
+	}
+
+	void LoadGame()
+	{
 		paused = LoadTexture("res/sprites/Pause&Gover/Paused.png");
 		shoot = LoadSound("res/sfx/Shoot.wav");
 		engines = LoadSound("res/sfx/Engines.wav");
 		death = LoadSound("res/sfx/Death.wav");
 		explotion = LoadSound("res/sfx/AsteroidBoom.wav");
-
-		isPlaying = true;
-		gameOver = false;
-		score = 0;
+	
+		LoadShipTexture();
+		LoadAsteroidsTexture();
 	}
 
 	void UnloadGame()

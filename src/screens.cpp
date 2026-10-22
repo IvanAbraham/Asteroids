@@ -14,11 +14,16 @@ void InitMenuScreen(Vector2 screenSize)
 
 }
 
-void UpdMenuScreen()
+void UpdMenuScreen(Vector2 screenSize)
 {
 	 mousePos = GetMousePosition();	 
 
 	 currentScreen = UpdateMenu(mousePos);
+
+	 if (currentScreen == Game)
+	 {
+		 ResetGame(screenSize);
+	 }
 
 	 if (currentScreen == Quit)
 	 {
