@@ -7,8 +7,8 @@ Buttons returnButton = {};
 
 void LoadTutorialTextures()
 {
-    tutorialBackgroundTexture = LoadTexture("../res/sprites/Tutorial/Tutorial.png");
-    returnButtonTexture = LoadTexture("../res/sprites/Buttons/Back.png");
+    tutorialBackgroundTexture = LoadTexture("res/sprites/Tutorial/Tutorial.png");
+    returnButtonTexture = LoadTexture("res/sprites/Buttons/Back.png");
 }
 
 void UnloadTutorialTextures()

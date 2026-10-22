@@ -19,12 +19,11 @@
 		InitAsteroids(screenSize);
 		LoadAsteroidsTexture();
 
-		paused = LoadTexture(".. /res/Sprites/Pause&Gover/Paused.png");
-
-		shoot = LoadSound("../res/sfx/Shoot.wav");
-		engines = LoadSound("../res/sfx/Engines.wav");
-		death = LoadSound("../res/sfx/Death.wav");
-		explotion = LoadSound("../res/sfx/AsteroidBoom.wav");
+		paused = LoadTexture("res/sprites/Pause&Gover/Paused.png");
+		shoot = LoadSound("res/sfx/Shoot.wav");
+		engines = LoadSound("res/sfx/Engines.wav");
+		death = LoadSound("res/sfx/Death.wav");
+		explotion = LoadSound("res/sfx/AsteroidBoom.wav");
 
 		isPlaying = true;
 		gameOver = false;

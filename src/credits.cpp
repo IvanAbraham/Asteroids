@@ -7,8 +7,8 @@ Buttons creditsReturnButton = {};
 
 void LoadCreditsTextures()
 {
-    creditsBackgroundTexture = LoadTexture("../res/sprites/Credits/Credits.png");
-    creditsReturnButtonTexture = LoadTexture("../res/sprites/Buttons/Back.png");
+    creditsBackgroundTexture = LoadTexture("res/sprites/Credits/Credits.png");
+    creditsReturnButtonTexture = LoadTexture("res/sprites/Buttons/Back.png");
 }
 
 void UnloadCreditsTextures()

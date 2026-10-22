@@ -51,7 +51,7 @@ float spawnTimer = 0.0f;
     
     void LoadAsteroidsTexture()
     {
-        asteroidsTexture = LoadTexture("../res/sprites/Game/Asteroid.png");
+        asteroidsTexture = LoadTexture("res/sprites/Game/Asteroid.png");
     }
 
     void UnloadAsteroidsTexture()

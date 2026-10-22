@@ -27,7 +27,7 @@ void InitShip(Vector2 screenSize)
 
 void LoadShipTexture()
 {
-	playerTexture = LoadTexture("../res/sprites/Game/Ship.png");
+	playerTexture = LoadTexture("res/sprites/Game/Ship.png");
 }
 
 void UnloadShipTexture()

@@ -109,11 +109,11 @@ void DrawMenu(Vector2 screenSize)
 void LoadMenuTextures()
 {
 
-    menuTexture = LoadTexture("../res/sprites/Menu/Menus.png");
-    startTexture = LoadTexture("../res/sprites/Buttons/Play.png");
-    tutorialTexture = LoadTexture("../res/sprites/Buttons/Tutorial.png");
-    creditsTexture = LoadTexture("../res/sprites/Buttons/Credits.png");
-    quitTexture = LoadTexture("../res/sprites/Buttons/Quit.png");
+    menuTexture = LoadTexture("res/sprites/Menu/Menus.png");
+    startTexture = LoadTexture("res/sprites/Buttons/Play.png");
+    tutorialTexture = LoadTexture("res/sprites/Buttons/Tutorial.png");
+    creditsTexture = LoadTexture("res/sprites/Buttons/Credits.png");
+    quitTexture = LoadTexture("res/sprites/Buttons/Quit.png");
 
 }
 
