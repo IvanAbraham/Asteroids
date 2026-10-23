@@ -11,12 +11,33 @@
 	Sound explotion;
 
 	Texture2D paused;
+	Texture2D deathScreen;
+	Texture2D resumeTexture;
+	Texture2D menuButtonTexture;
+
+	Buttons pauseButton;
+	Buttons resumeButton;
+	Buttons menuButton;
 
 	void InitializeGame(Vector2 screenSize)
 	{
 		LoadGame();
-
+		InitGameButtons(screenSize);
 		ResetGame(screenSize);
+	}
+
+	void InitGameButtons(Vector2 screenSize)
+	{
+		float PSize = static_cast<float>(MeasureText("P", 30));
+		Vector2 PausePosition = { screenSize.x - PSize - 10, 10 };
+
+		menuButton.size = { screenSize.x / 3.5f, screenSize.y / 15.0f };
+		menuButton.position = { screenSize.x / 2 - menuButton.size.x / 2, screenSize.y / 2 + menuButton.size.y / 2 };
+		resumeButton.size = { screenSize.x / 3.5f, screenSize.y / 15.0f };
+		resumeButton.position = { screenSize.x / 2 - resumeButton.size.x / 2, menuButton.position.y - menuButton.size.y - 10};
+		pauseButton.position = { PausePosition };
+		pauseButton.size = { PSize, PSize };
+
 	}
 
 	void ResetGame(Vector2 screenSize)
@@ -32,6 +53,9 @@
 	void LoadGame()
 	{
 		paused = LoadTexture("res/sprites/Pause&Gover/Paused.png");
+		deathScreen = LoadTexture("res/sprites/Pause&Gover/GameOver.png");
+		resumeTexture = LoadTexture("res/sprites/Buttons/Resume.png");
+		menuButtonTexture = LoadTexture("res/sprites/Buttons/Menu.png");
 		shoot = LoadSound("res/sfx/Shoot.wav");
 		engines = LoadSound("res/sfx/Engines.wav");
 		death = LoadSound("res/sfx/Death.wav");
@@ -41,11 +65,14 @@
 		LoadAsteroidsTexture();
 	}
 
-	void UnloadGame()
+	void UnloadGame()	
 	{
 		UnloadShipTexture();
 		UnloadAsteroidsTexture();
 		UnloadTexture(paused);
+		UnloadTexture(menuButtonTexture);
+		UnloadTexture(resumeTexture);
+		UnloadTexture(deathScreen);
 		UnloadSound(shoot);
 		UnloadSound(engines);
 		UnloadSound(death);
@@ -54,18 +81,24 @@
 
 	void UpdateGame(Vector2 screenSize, Vector2 mousePos)
 	{
-		
+		//Pause
 		if (IsKeyReleased(KEY_ESCAPE))
+		{
+			isPlaying = !isPlaying;
+		}
+		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CollisionPointRec(mousePos, pauseButton.position, pauseButton.size))
 		{
 			isPlaying = false;
 		}
-		
+
 		if (isPlaying)
 		{
+			//Update entities
 			UpdateShip(mousePos);
 			UpdateBullets();
 			UpdateAsteroids(screenSize);
 
+			//Player controls
 			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
 			{
 				PlaySound(shoot);
@@ -76,6 +109,7 @@
 				PlaySound(engines);
 			}
 
+			//ScreenChecks
 			if (InScreenCheck(P1.position, P1.radius, screenSize))
 			{
 				if (P1.position.x + P1.radius < 0)
@@ -101,24 +135,24 @@
 			
 			CheckCollisions();
 
+			//Game over
+
 			if (gameOver)
 			{
 				isPlaying = false;
-
 			}
 
 		}
-		else if (!isPlaying && !gameOver)
+		//Pause
+		else if (!gameOver)
 		{
-
-			if (IsKeyPressed(KEY_ESCAPE))
+			if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
 			{
-				currentScreen = Menu;
-			}
-
-			if (IsKeyPressed(KEY_ENTER) || IsKeyPressed(KEY_SPACE))
-			{
-				isPlaying = true;
+				if (CollisionPointRec(mousePos, resumeButton.position, resumeButton.size))
+					isPlaying = true;
+				
+				if (CollisionPointRec(mousePos, menuButton.position, menuButton.size))
+					currentScreen = Menu;
 			}
 		}
 
@@ -128,14 +162,40 @@
 		}
 	}
 
-	void DrawGame()
+	void DrawGame(Vector2 screenSize)
 	{
 		ClearBackground(BLACK);
 		DrawText(TextFormat("Lifes: %i", P1.lifes), 0, 0, 40, WHITE);
-		DrawText(TextFormat("Score: %i", score), 900, 0, 40, WHITE);
+		DrawText(TextFormat("Score: %i", score), 0, static_cast<int>(screenSize.y) - 40, 40, WHITE);
 		DrawShip();
 		DrawBullets();
 		DrawAsteroids();
+
+		if (isPlaying)
+		{
+			DrawText("P", static_cast<int>(pauseButton.position.x), static_cast<int>(pauseButton.position.y), 30, WHITE);
+		}
+
+		if (!isPlaying && !gameOver)
+		{
+			DrawRectangle(0, 0, static_cast<int>(screenSize.x), static_cast<int>(screenSize.y), Fade(BLACK, 0.5f));
+
+			Rectangle source = { 0, 0, (float)paused.width, (float)paused.height };
+			Rectangle dest = { 0, 0, screenSize.x, screenSize.y };
+			DrawTexturePro(paused, source, dest, { 0, 0 }, 0.0f, WHITE);
+
+			Rectangle sourceResume = { 0, 0, (float)resumeTexture.width, (float)resumeTexture.height };
+			Rectangle destResume = { resumeButton.position.x, resumeButton.position.y, resumeButton.size.x, resumeButton.size.y };
+			DrawTexturePro(resumeTexture, sourceResume, destResume, { 0, 0 }, 0.0f, WHITE);
+
+			Rectangle sourceMenu = { 0, 0, (float)menuButtonTexture.width, (float)menuButtonTexture.height };
+			Rectangle destMenu = { menuButton.position.x, menuButton.position.y, menuButton.size.x, menuButton.size.y };
+			DrawTexturePro(menuButtonTexture, sourceMenu, destMenu, { 0, 0 }, 0.0f, WHITE);
+		}
+		else if (gameOver)
+		{
+
+		}
 	}
 
 	void CheckCollisions()

@@ -83,7 +83,7 @@ namespace Asteroids
 
 			case Game:
 
-				DrwGameScreen();
+				DrwGameScreen(screenSize);
 
 				break;
 

@@ -55,9 +55,9 @@ void UpdGameScreen(Vector2 screenSize)
 	UpdateGame(screenSize, mousePos);
 }
 
-void DrwGameScreen()
+void DrwGameScreen(Vector2 screenSize)
 {
-	DrawGame();
+	DrawGame(screenSize);
 }
 
 void InitCreditsScreen(Vector2 screenSize)
