@@ -4,6 +4,7 @@ Ship P1;
 Bullet bullets[maxBullets];
 
 Texture2D playerTexture;
+Texture2D bulletTexture;
 
 void InitShip(Vector2 screenSize)
 {
@@ -28,11 +29,13 @@ void InitShip(Vector2 screenSize)
 void LoadShipTexture()
 {
 	playerTexture = LoadTexture("res/sprites/Game/Ship.png");
+	bulletTexture = LoadTexture("res/sprites/Game/Shoot.png");
 }
 
 void UnloadShipTexture()
 {
 	UnloadTexture(playerTexture);
+	UnloadTexture(bulletTexture);
 }
 
 void UpdateShip(Vector2 mousePos)
@@ -133,7 +136,13 @@ void DrawBullets()
 	{
 		if (bullets[i].isActive)
 		{
-			DrawCircleV(bullets[i].position, bullets[i].radius, WHITE);
+			float bulletRotation = atan2f(bullets[i].velocity.y, bullets[i].velocity.x) * RAD2DEG;
+
+			Vector2 origin = { bullets[i].radius, bullets[i].radius };
+			Rectangle source = { 0, 0, (float)bulletTexture.width, (float)bulletTexture.height };
+			Rectangle dest = { bullets[i].position.x, bullets[i].position.y, bullets[i].radius * 2.0f, bullets[i].radius * 2.0f };
+
+			DrawTexturePro(bulletTexture, source, dest, origin, bulletRotation + 90.0f, WHITE);
 		}
 	}
 
