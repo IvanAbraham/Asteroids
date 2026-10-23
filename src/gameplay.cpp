@@ -28,7 +28,7 @@
 
 	void InitGameButtons(Vector2 screenSize)
 	{
-		float PSize = static_cast<float>(MeasureText("P", 30));
+		float PSize = static_cast<float>(MeasureText("P", 40));
 		Vector2 PausePosition = { screenSize.x - PSize - 10, 10 };
 
 		menuButton.size = { screenSize.x / 3.5f, screenSize.y / 15.0f };
@@ -82,7 +82,7 @@
 	void UpdateGame(Vector2 screenSize, Vector2 mousePos)
 	{
 		//Pause
-		if (IsKeyReleased(KEY_ESCAPE))
+		if (IsKeyReleased(KEY_ESCAPE) && !gameOver)
 		{
 			isPlaying = !isPlaying;
 		}
@@ -155,10 +155,14 @@
 					currentScreen = Menu;
 			}
 		}
-
-		if (gameOver)
+		//Game Over
+		else
 		{
-			currentScreen = Menu;
+			if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
+			{
+				if (CollisionPointRec(mousePos, menuButton.position, menuButton.size))
+					currentScreen = Menu;
+			}
 		}
 	}
 
@@ -173,7 +177,7 @@
 
 		if (isPlaying)
 		{
-			DrawText("P", static_cast<int>(pauseButton.position.x), static_cast<int>(pauseButton.position.y), 30, WHITE);
+			DrawText("P", static_cast<int>(pauseButton.position.x), static_cast<int>(pauseButton.position.y), 40, WHITE);
 		}
 
 		if (!isPlaying && !gameOver)
@@ -194,7 +198,18 @@
 		}
 		else if (gameOver)
 		{
+			DrawRectangle(0, 0, static_cast<int>(screenSize.x), static_cast<int>(screenSize.y), Fade(BLACK, 0.5f));
 
+			Rectangle sourceDeath = { 0, 0, (float)deathScreen.width, (float)deathScreen.height };
+			Rectangle destDeath = { 0, 0, screenSize.x, screenSize.y };
+			DrawTexturePro(deathScreen, sourceDeath, destDeath, { 0, 0 }, 0.0f, WHITE);
+
+			Rectangle sourceMenu = { 0, 0, (float)menuButtonTexture.width, (float)menuButtonTexture.height };
+			Rectangle destMenu = { menuButton.position.x, menuButton.position.y, menuButton.size.x, menuButton.size.y };
+			DrawTexturePro(menuButtonTexture, sourceMenu, destMenu, { 0, 0 }, 0.0f, WHITE);
+
+			int scoreLength = MeasureText("Final Score: %i", 40);
+			DrawText(TextFormat("Final Score: %i", score), static_cast<int>(screenSize.x / 2 - scoreLength / 2), static_cast<int>(menuButton.position.y) + 60, 40, WHITE);
 		}
 	}
 
