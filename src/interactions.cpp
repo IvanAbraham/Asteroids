@@ -1,5 +1,17 @@
 #include "interactions.h"
 
+Sound buttonSound;
+
+void LoadButtonSound()
+{
+    buttonSound = LoadSound("res/sfx/buttonHover.wav");
+}
+
+void UnloadButtonSound()
+{
+    UnloadSound(buttonSound);
+}
+
 bool CollisionRecRec(Vector2 pos1, Vector2 size1, Vector2 pos2, Vector2 size2)
 {
     return (pos1.x < pos2.x + size2.x &&

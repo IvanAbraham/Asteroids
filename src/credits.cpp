@@ -27,11 +27,12 @@ void InitializeCredits(Vector2 screenSize)
 
 GameScreen UpdateCredits(Vector2 mousePos)
 {
-    if (IsMouseButtonDown(MOUSE_BUTTON_LEFT))
+    if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
     {
         if (CollisionPointRec(mousePos, creditsReturnButton.position, creditsReturnButton.size))
         {
-            return Menu; 
+            PlaySound(buttonSound);
+            return Menu;
         }
     }
 

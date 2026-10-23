@@ -15,3 +15,8 @@ struct Buttons
 	Vector2 position;
 
 };
+
+extern Sound buttonSound;
+
+void LoadButtonSound();
+void UnloadButtonSound();

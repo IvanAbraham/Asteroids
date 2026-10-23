@@ -28,11 +28,12 @@ void InitializeTutorial(Vector2 screenSize)
 
 GameScreen UpdateTutorial(Vector2 mousePos)
 {
-    if (IsMouseButtonDown(MOUSE_BUTTON_LEFT))
+    if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
     {
         if (CollisionPointRec(mousePos, returnButton.position, returnButton.size))
         {
-            return Menu; 
+            PlaySound(buttonSound);
+            return Menu;
         }
     }
     return Tutorial; 

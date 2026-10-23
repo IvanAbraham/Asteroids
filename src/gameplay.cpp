@@ -89,6 +89,7 @@
 		if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CollisionPointRec(mousePos, pauseButton.position, pauseButton.size))
 		{
 			isPlaying = false;
+			PlaySound(buttonSound);
 		}
 
 		if (isPlaying)
@@ -149,10 +150,16 @@
 			if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
 			{
 				if (CollisionPointRec(mousePos, resumeButton.position, resumeButton.size))
+				{
 					isPlaying = true;
-				
+					PlaySound(buttonSound);
+				}
+
 				if (CollisionPointRec(mousePos, menuButton.position, menuButton.size))
+				{
 					currentScreen = Menu;
+					PlaySound(buttonSound);
+				}
 			}
 		}
 		//Game Over
@@ -161,7 +168,10 @@
 			if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
 			{
 				if (CollisionPointRec(mousePos, menuButton.position, menuButton.size))
+				{
 					currentScreen = Menu;
+					PlaySound(buttonSound);
+				}
 			}
 		}
 	}

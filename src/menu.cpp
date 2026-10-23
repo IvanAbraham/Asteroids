@@ -44,33 +44,33 @@ void InitializeMenu(Vector2 screenSize)
 GameScreen UpdateMenu(Vector2 mousePos)
 {
 
-    if (IsMouseButtonDown(MOUSE_BUTTON_LEFT))
+    if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
     {
 
         if (CollisionPointRec(mousePos, startButton.position, startButton.size))
         {
-            
+            PlaySound(buttonSound);
             return Game;
 
         }
 
         if (CollisionPointRec(mousePos, tutorialButton.position, tutorialButton.size))
         {
-
+            PlaySound(buttonSound);
             return Tutorial;
 
         }
 
         if (CollisionPointRec(mousePos, creditsButton.position, creditsButton.size))
         {
-
+            PlaySound(buttonSound);
             return Credits;
 
         }
 
         if (CollisionPointRec(mousePos, quitButton.position, quitButton.size))
         {
-
+            PlaySound(buttonSound);
             return Quit;
 
         }
